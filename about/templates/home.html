@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+<h2>{{my_user}}</h2>
+
+{% if img_link %}
+<img src='{{ img_link }}' />
+{% endif %}
+
+
+<form method='POST' action=''>{% csrf_token %}
+{{ form.as_p }}
+<input type='submit' value='Send' />
+</form>
